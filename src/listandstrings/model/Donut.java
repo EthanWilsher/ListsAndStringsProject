@@ -7,4 +7,9 @@ public class Donut
 	private String shape;
 	private String flavor;
 	private int holeCount;
+	
+	public Donut()
+	{
+		
+	}
 }
