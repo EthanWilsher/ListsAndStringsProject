@@ -36,13 +36,38 @@ public class Donut
 		this.isGlazed = true;
 		this.hasSprinkles = true;
 	}
+//	
+//	public Donut(String shape, String flavor, int holeCount)
+//	{
+//		this();
+//		this.shape = shape;
+//		this.flavor = flavor;
+//		this.holeCount = holeCount;
+//	}
 	
-	public Donut(String shape, String flavor, int holeCount)
+	public String getShape()
 	{
-		this();
-		this.shape = shape;
-		this.flavor = flavor;
-		this.holeCount = holeCount;
+		return shape;
 	}
+	
+	public void setShape(String shape)
+	{
+		this.shape = shape;
+	}
+	public String getFlavor()
+	{
+		return flavor;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

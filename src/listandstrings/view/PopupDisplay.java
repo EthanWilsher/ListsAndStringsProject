@@ -2,6 +2,8 @@ package listandstrings.view;
 
 import javax.swing.JOptionPane;
 
+import listandstrings.model.Donut;
+
 public class PopupDisplay
 {
 	/**
@@ -9,7 +11,7 @@ public class PopupDisplay
 	 * @param message The Messade that is displayed.
 	 */
 	
-	public void displayText(String message)
+	public void displayText(Donut message)
 	{
 		JOptionPane.showMessageDialog(null, message);
 	}
@@ -27,5 +29,7 @@ public class PopupDisplay
 			
 		return response;
 	}
+
+	
 
 }

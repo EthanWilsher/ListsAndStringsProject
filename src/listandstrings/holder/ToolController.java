@@ -8,10 +8,12 @@ import listandstrings.view.PopupDisplay;
 public class ToolController
 {
 	private List<Donut> donutList;
+	private PopupDisplay display;
 	
 	public ToolController()
 	{
 		donutList = new ArrayList<Donut>(); //this is how to initialize the list for donut.
+		display = new PopupDisplay();
 	}
 	
 	public void start()
@@ -24,11 +26,25 @@ public class ToolController
 	
 	private void showTheList()
 	{
+		String favorite = "chocolate and more chocolate";
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
+			String currentFlavor = donutList.get(index).getFlavor();
+			Donut currentDonut = donutList.get(index);
+			String flavor = currentDonut.getFlavor();
+			if (currentFlavor.equals(favorite))
+			{
+				for (int woop = 0; woop < 5; woop += 1)
+				{
+					display.displayText("MMMMMM My favorite");
+				}
+			for (int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+			{
+				display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+			}
 			display.displayText(donutList.get(index));
-		}
-	}
+		    
+			}
 	
 	private void fillTheList()
 	{
