@@ -17,4 +17,9 @@ public class Bagel
 		this.hasFruit = false;
 		
 	}
+
+	public Bagel(String string)
+	{
+		// TODO Auto-generated constructor stub
+	}
 }
