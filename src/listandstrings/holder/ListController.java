@@ -5,30 +5,30 @@ import java.util.ArrayList;
 import listandstrings.model.Donut; //Must import the donut model so we can put it in a list.
 import listandstrings.view.PopupDisplay;
 
-public class ToolController
+public class ListController
 {
 	private List<Donut> donutList;
 	private PopupDisplay display;
-	
-	public ToolController()
+
+	public ListController()
 	{
-		donutList = new ArrayList<Donut>(); //this is how to initialize the list for donut.
+		donutList = new ArrayList<Donut>(); // this is how to initialize the list for donut.
 		display = new PopupDisplay();
 	}
-	
+
 	public void start()
 	{
 		Donut temp = new Donut();
-		donutList.add(new Donut()); //Added a new donut into the list.
+		donutList.add(new Donut()); // Added a new donut into the list.
 		fillTheList();
-//		showTheList();
+		// showTheList();
 		changeTheList();
 	}
-	
+
 	private void showTheList()
 	{
 		String favorite = "chocolate and more chocolate";
-		for(int index = 0; index < donutList.size(); index += 1)
+		for (int index = 0; index < donutList.size(); index += 1)
 		{
 			String currentFlavor = donutList.get(index).getFlavor();
 			Donut currentDonut = donutList.get(index);
@@ -39,19 +39,17 @@ public class ToolController
 				{
 					display.displayText("MMMMMM My favorite");
 				}
-			for (int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
-			{
-				display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+				for (int currentLetterIndex = 0; currentLetterIndex < currentFlavor.length(); currentLetterIndex += 1)
+				{
+					display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
+				}
+				display.displayText(donutList.get(index));
 			}
-			display.displayText(donutList.get(index));
-			}
-			
+
 		}
-			
-		    
-		}
-			
-	
+
+	}
+
 	private void fillTheList()
 
 	{
@@ -59,17 +57,14 @@ public class ToolController
 		Donut glazedSprinkles = new Donut("Glazed and Sprinkles");
 		Donut chocolate = new Donut("Chocolate");
 		Donut mapleBar = new Donut("Rectangle, Maple, 0");
-		
+
 		donutList.add(jellyFilled);
 		donutList.add(glazedSprinkles);
 		donutList.add(chocolate);
 		donutList.add(mapleBar);
-		
-		
+
 	}
-	
-	
-	
+
 	private void changeTheList()
 	{
 		display.displayText("The list is this big: " + donutList.size());
@@ -77,18 +72,24 @@ public class ToolController
 		display.displayText(removed.getFlavor() + " was removed from the list");
 		display.displayText("Now it is this big: " + donutList.size());
 		donutList.add(removed);
-		
+
 		display.displayText("The list is still contains: " + donutList.size() + " items.");
-		removed = donutList.set(3,  new Donut());
+		removed = donutList.set(3, new Donut());
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
-		
+
 		display.displayText("The list is this big: " + donutList.size());
-		
-		
-		
+
+	}
+
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList;
 	}
 	
-	
-	
+	public PopupDisplay getDisplay()
+	{
+		
+		return display;
+	}
 
 }
