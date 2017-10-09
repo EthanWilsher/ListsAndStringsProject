@@ -11,10 +11,10 @@ public class PopupDisplay
 	 * @param message The Messade that is displayed.
 	 */
 	
-	public void displayText(Donut message)
-	{
-		JOptionPane.showMessageDialog(null, message);
-	}
+//	public void displayText(Donut message)
+//	{
+//		JOptionPane.showMessageDialog(null, message);
+//	}
 	
 	/**
 	 * Displays the supplied question in a popup and returns the answer as a string.
@@ -28,6 +28,14 @@ public class PopupDisplay
 		response += JOptionPane.showInputDialog(null, fromQuestion);
 			
 		return response;
+	}
+
+	public void displayText(String string)
+	{
+		
+		// TODO Auto-generated method stub
+		JOptionPane.showMessageDialog(null, string);
+		
 	}
 
 	

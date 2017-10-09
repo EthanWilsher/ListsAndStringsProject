@@ -21,7 +21,8 @@ public class ToolController
 		Donut temp = new Donut();
 		donutList.add(new Donut()); //Added a new donut into the list.
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	
 	private void showTheList()
@@ -43,10 +44,16 @@ public class ToolController
 				display.displayText(currentFlavor.substring(currentLetterIndex, currentLetterIndex + 1));
 			}
 			display.displayText(donutList.get(index));
-		    
 			}
+			
+		}
+			
+		    
+		}
+			
 	
 	private void fillTheList()
+
 	{
 		Donut jellyFilled = new Donut("jelly filled");
 		Donut glazedSprinkles = new Donut("Glazed and Sprinkles");
@@ -60,5 +67,28 @@ public class ToolController
 		
 		
 	}
+	
+	
+	
+	private void changeTheList()
+	{
+		display.displayText("The list is this big: " + donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + " was removed from the list");
+		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(removed);
+		
+		display.displayText("The list is still contains: " + donutList.size() + " items.");
+		removed = donutList.set(3,  new Donut());
+		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
+		
+		display.displayText("The list is this big: " + donutList.size());
+		
+		
+		
+	}
+	
+	
+	
 
 }
