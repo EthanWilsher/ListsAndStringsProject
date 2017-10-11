@@ -1,8 +1,8 @@
-package listandstrings.view;
+package useful.view;
 
 import javax.swing.JOptionPane;
 
-import listandstrings.model.Donut;
+import useful.model.Donut;
 
 public class PopupDisplay
 {

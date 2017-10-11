@@ -1,9 +1,10 @@
-package listandstrings.holder;
+package useful.controller;
 
 import java.util.List;
 import java.util.ArrayList;
-import listandstrings.model.Donut; //Must import the donut model so we can put it in a list.
-import listandstrings.view.PopupDisplay;
+
+import useful.model.Donut;
+import useful.view.PopupDisplay;
 
 public class ListController
 {

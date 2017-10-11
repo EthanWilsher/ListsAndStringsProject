@@ -1,4 +1,4 @@
-package listandstrings.model;
+package useful.model;
 
 public class Donut
 {
