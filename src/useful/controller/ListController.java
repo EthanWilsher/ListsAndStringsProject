@@ -20,6 +20,16 @@ public class ListController
 	public void start()
 	{
 		Donut temp = new Donut();
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("I love dinosarurs");
+		tempList.add(" The emoji movie july twenty eight go see it with your fellow broskis A DAB");
+		tempList.add("I am a sausage mcmuffin.");
+		
+		display.displayText("The longest string in the templList is: " + maxLength(tempList) + display.displayText(tempList));
+		
+		
 		donutList.add(new Donut()); // Added a new donut into the list.
 		fillTheList();
 		// showTheList();
@@ -31,6 +41,19 @@ public class ListController
 		String favorite = "chocolate and more chocolate";
 		for (int index = 0; index < donutList.size(); index += 1)
 		{
+		//Public int maxLength(arraylist<string> me list)
+			// {   int max = 0;
+			//for (int index = 0; index < myList.size() ); index +=1
+			//{
+				// if (max < myList.get(index).length()
+					//{
+						//max = myList.get(index)length);
+					//}
+			//}
+			
+			//return max;
+			//}
+			
 			String currentFlavor = donutList.get(index).getFlavor();
 			Donut currentDonut = donutList.get(index);
 			String flavor = currentDonut.getFlavor();
@@ -80,6 +103,39 @@ public class ListController
 
 		display.displayText("The list is this big: " + donutList.size());
 
+	}
+	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for(int index = 0; index < myList.size(); index += 1)
+		{
+			if (max <myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		
+		
+		return max;
+	}
+	
+	public String getLongestString(ArrayList<String> myList) 
+	{
+		String longest = "";
+		int max = 0; 
+		
+		for (int index = 0; index < myList.size(); index +=1)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		
+		return longest;
 	}
 
 	public ArrayList<Donut> getDonutList()
